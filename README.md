@@ -1,6 +1,8 @@
-# OpenCode Skill: Python Virtual Environment
+# Skill: Python Virtual Environment
 
 Enforce virtual environment usage for Python projects that require third-party packages.
+
+Works with: **OpenCode**, **Claude Code**, **Cursor**, **Cline**, and other AI coding assistants.
 
 [中文说明](#中文说明)
 
@@ -32,10 +34,20 @@ Enforce virtual environment usage for Python projects that require third-party p
 
 ## Installation
 
+### OpenCode
 ```bash
 cd ~/.config/opencode/skills
 git clone https://github.com/cikichen/skill-python-venv.git python-venv
 ```
+
+### Claude Code
+```bash
+cd ~/.claude/skills
+git clone https://github.com/cikichen/skill-python-venv.git python-venv
+```
+
+### Other AI Assistants
+Copy `SKILL.md` to your assistant's custom instructions or skills directory.
 
 ## Quick Reference
 
@@ -58,6 +70,8 @@ else { python -m venv .venv; .\.venv\Scripts\Activate.ps1 }
 |------|-----------------|
 | `requirements.txt` | `pip install -r requirements.txt` |
 | `pyproject.toml` | `pip install -e .` |
+| `pyproject.toml` + `poetry.lock` | `poetry install` |
+| `pyproject.toml` + `uv.lock` | `uv sync` |
 | `environment.yml` | `conda env create -f environment.yml` |
 
 ---
@@ -94,10 +108,20 @@ else { python -m venv .venv; .\.venv\Scripts\Activate.ps1 }
 
 ### 安装
 
+#### OpenCode
 ```bash
 cd ~/.config/opencode/skills
 git clone https://github.com/cikichen/skill-python-venv.git python-venv
 ```
+
+#### Claude Code
+```bash
+cd ~/.claude/skills
+git clone https://github.com/cikichen/skill-python-venv.git python-venv
+```
+
+#### 其他 AI 助手
+将 `SKILL.md` 复制到你的助手的自定义指令或技能目录。
 
 ### 项目类型检测
 
@@ -105,6 +129,8 @@ git clone https://github.com/cikichen/skill-python-venv.git python-venv
 |------|----------|
 | `requirements.txt` | `pip install -r requirements.txt` |
 | `pyproject.toml` | `pip install -e .` |
+| `pyproject.toml` + `poetry.lock` | `poetry install` |
+| `pyproject.toml` + `uv.lock` | `uv sync` |
 | `environment.yml` | `conda env create -f environment.yml` |
 
 ## License

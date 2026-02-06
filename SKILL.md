@@ -220,6 +220,49 @@ conda info --envs
 |--------------|--------------|-----------------|
 | `requirements.txt` | Traditional | `pip install -r requirements.txt` |
 | `pyproject.toml` | Modern (PEP 517/518) | `pip install -e .` or `uv pip install -e .` |
+| `pyproject.toml` + `poetry.lock` | Poetry | `poetry install` |
+| `pyproject.toml` + `uv.lock` | uv native | `uv sync` |
 | `setup.py` | Legacy | `pip install -e .` |
 | `Pipfile` | Pipenv | `pipenv install` |
 | `environment.yml` | Conda | `conda env create -f environment.yml` |
+
+## Troubleshooting
+
+### Corrupted Virtual Environment
+
+If venv is broken (import errors, missing packages after install):
+
+```bash
+# Remove and recreate
+rm -rf .venv
+uv venv && source .venv/bin/activate
+# or
+python3 -m venv .venv && source .venv/bin/activate
+```
+
+### Wrong Python Version
+
+```bash
+# Specify Python version with uv
+uv venv --python 3.11
+
+# Or with standard venv
+python3.11 -m venv .venv
+```
+
+### Permission Denied on Windows
+
+Run PowerShell as Administrator, or:
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+### WSL (Windows Subsystem for Linux)
+
+Use Linux commands in WSL:
+```bash
+# Same as Linux/macOS
+source .venv/bin/activate
+```
+
+Note: Don't mix Windows venv with WSL. Create separate venv for each environment.
