@@ -34,7 +34,7 @@ Enforce virtual environment usage for Python projects that require third-party p
 
 ```bash
 cd ~/.config/opencode/skills
-git clone https://github.com/cikichen/opencode-skill-python-venv.git python-venv
+git clone https://github.com/cikichen/skill-python-venv.git python-venv
 ```
 
 ## Quick Reference
@@ -96,7 +96,7 @@ else { python -m venv .venv; .\.venv\Scripts\Activate.ps1 }
 
 ```bash
 cd ~/.config/opencode/skills
-git clone https://github.com/cikichen/opencode-skill-python-venv.git python-venv
+git clone https://github.com/cikichen/skill-python-venv.git python-venv
 ```
 
 ### 项目类型检测
