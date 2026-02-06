@@ -42,12 +42,8 @@ git clone https://github.com/cikichen/skill-python-venv.git python-venv
 
 ### Claude Code
 ```bash
-# Option 1: Add to commands directory
-cd ~/.claude/commands
+cd ~/.claude/skills
 git clone https://github.com/cikichen/skill-python-venv.git python-venv
-
-# Option 2: Reference in CLAUDE.md
-echo "See: ~/.claude/commands/python-venv/SKILL.md" >> ~/.claude/CLAUDE.md
 ```
 
 ### Other AI Assistants
@@ -120,12 +116,8 @@ git clone https://github.com/cikichen/skill-python-venv.git python-venv
 
 #### Claude Code
 ```bash
-# Option 1: 添加到 commands 目录
-cd ~/.claude/commands
+cd ~/.claude/skills
 git clone https://github.com/cikichen/skill-python-venv.git python-venv
-
-# Option 2: 在 CLAUDE.md 中引用
-echo "See: ~/.claude/commands/python-venv/SKILL.md" >> ~/.claude/CLAUDE.md
 ```
 
 #### 其他 AI 助手
