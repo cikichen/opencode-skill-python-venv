@@ -6,9 +6,9 @@ Before creating a new virtual environment, always ask the user:
 
 ```
 No existing virtual environment found. Choose an option:
-1. Create new venv in current directory (.venv)
-2. Create venv at custom path
-3. Use system/main Python (no virtual environment)
+1. Create new venv in current directory (.venv) [recommended]
+2. Use system Python directly
+3. Create venv at custom path
 ```
 
 Then proceed based on their choice.

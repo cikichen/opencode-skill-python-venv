@@ -1,6 +1,6 @@
 ---
 name: python-venv
-description: "Before running Python scripts or installing packages, check for existing virtual environments and reuse them if found. If no virtual environment exists, ask the user to choose: (1) Create new venv in current directory, (2) Create venv at custom path, or (3) Use system/main Python directly. This applies to: running .py files, using pip/uv pip install, or any task requiring third-party packages. Exceptions: simple one-liners using only Python standard library."
+description: "Before running Python scripts or installing packages, check for existing virtual environments and reuse them if found. If no virtual environment exists, ask the user to choose: (1) Create new venv in current directory (recommended), (2) Use system Python directly, or (3) Create venv at custom path. This applies to: running .py files, using pip/uv pip install, or any task requiring third-party packages. Exceptions: simple one-liners using only Python standard library."
 ---
 
 # Python Virtual Environment Requirement
@@ -33,10 +33,10 @@ description: "Before running Python scripts or installing packages, check for ex
 ```
 1. Check for existing virtual environment (.venv, venv, env, .env) → If YES, activate and reuse it
 2. If NOT exists → Ask user to choose:
-   - **Create new venv** (default): Create .venv in current directory with uv or python3 -m venv
+   - **Create new venv** (recommended): Create .venv in current directory with uv or python3 -m venv
+   - **Use system Python**: Skip venv, use system Python directly
    - **Custom path**: Specify custom path for virtual environment
-   - **Use system/main Python**: Skip venv, use system Python directly
-3. Based on user choice: Create/create-at-path/skip-virtual-environment
+3. Based on user choice: Create/skip/create-at-path virtual-environment
 4. Activate (if venv was created), then proceed with Python commands
 ```
 
@@ -55,8 +55,8 @@ Before Python operations requiring venv:
 1. [ ] Check for existing virtual environment: `.venv/`, `venv/`, `env/`, `.env/`
 2. [ ] Check for conda: `conda info --envs` or `CONDA_PREFIX`
 3. [ ] If exists → Reuse it (activate)
-4. [ ] If not exists → Ask user: Create new (.venv)? Custom path? Use system Python?
-5. [ ] Based on choice: Create / Create at path / Skip
+4. [ ] If not exists → Ask user: Create new (.venv)? Use system Python? Custom path?
+5. [ ] Based on choice: Create / Skip / Create at path
 6. [ ] Activate (if venv created), proceed
 
 ## Project Type Detection
